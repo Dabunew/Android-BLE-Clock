@@ -167,7 +167,7 @@ public class BLEClockActivity extends AppCompatActivity {
 				List<BluetoothGattCharacteristic> characteristics = service.getCharacteristics();
 				m_activity.runOnUiThread(new AppendText("Service: " + service.getUuid()));
 				for (BluetoothGattCharacteristic characteristic : characteristics) {
-					m_activity.runOnUiThread(new AppendText("    characteristic: " + characteristic.getUuid().toString().substring(1,9)));
+					m_activity.runOnUiThread(new AppendText("    characteristic: " + characteristic.getUuid().toString().substring(0,9)));
 				}
 			}
 			Date mDate = Calendar.getInstance().getTime();
